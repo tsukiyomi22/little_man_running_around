@@ -1,0 +1,101 @@
+[gd_resource type="TileSet" format=3 uid="uid://sialiu607bv"]
+
+[ext_resource type="Texture2D" uid="uid://drms02levxwqh" path="res://assets/environment/tilesheets/Bushe1.png" id="1_n5878"]
+[ext_resource type="Texture2D" uid="uid://xoxi7w4dknkc" path="res://assets/environment/tilesheets/Bushe2.png" id="2_6j1s0"]
+[ext_resource type="Texture2D" uid="uid://b66x6uf86luwu" path="res://assets/environment/tilesheets/Bushe3.png" id="3_c68al"]
+[ext_resource type="Texture2D" uid="uid://y6xl6f6x1u02" path="res://assets/environment/tilesheets/Tree3.png" id="4_yrmkj"]
+[ext_resource type="Texture2D" uid="uid://dj5gvhx2ua6c2" path="res://assets/environment/tilesheets/Tree4.png" id="5_y3jej"]
+[ext_resource type="Texture2D" uid="uid://b3j5apy3hehe2" path="res://assets/environment/tilesheets/Props.png" id="6_x7tkq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gm4i7"]
+texture = ExtResource("1_n5878")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ydt1"]
+texture = ExtResource("2_6j1s0")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 5)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v63tm"]
+texture = ExtResource("3_c68al")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_speed = 8.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 9)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iu7am"]
+texture = ExtResource("4_yrmkj")
+texture_region_size = Vector2i(192, 192)
+0:0/animation_speed = 8.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 64)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v60ih"]
+texture = ExtResource("5_y3jej")
+texture_region_size = Vector2i(192, 192)
+0:0/animation_speed = 8.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 64)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dqilb"]
+texture = ExtResource("6_x7tkq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_gm4i7")
+sources/1 = SubResource("TileSetAtlasSource_2ydt1")
+sources/2 = SubResource("TileSetAtlasSource_v63tm")
+sources/3 = SubResource("TileSetAtlasSource_iu7am")
+sources/4 = SubResource("TileSetAtlasSource_v60ih")
+sources/5 = SubResource("TileSetAtlasSource_dqilb")
