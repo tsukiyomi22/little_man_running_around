@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://c23ncrnuqs8kf"]
+[gd_scene format=3 uid="uid://bc3xhy57cy1gj"]
 
-[ext_resource type="Script" uid="uid://ckrm6ea6fx801" path="res://scenes/entities/player.gd" id="1_08t41"]
-[ext_resource type="Texture2D" uid="uid://dd14yvscw8gcd" path="res://assets/sprites/player/Warrior_Blue.png" id="1_ucweq"]
+[ext_resource type="Script" uid="uid://c7yq4tb8odwdd" path="res://scenes/entities/enemies/enemy.gd" id="1_essrt"]
+[ext_resource type="Texture2D" uid="uid://ylse6gpvtwpm" path="res://assets/sprites/enemies/Warrior_Red.png" id="2_c8ylr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_08t41"]
 
@@ -183,12 +183,16 @@ states/run/node = SubResource("AnimationNodeAnimation_ss7kx")
 states/run/position = Vector2(531, 42)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_dnykm"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_c5rqy"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_b6tgf"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_ogpgs"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_spk56"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_1yk18")]
 
-[node name="Player" type="CharacterBody2D" unique_id=1203774278]
-script = ExtResource("1_08t41")
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pm80n"]
+radius = 16.0
+height = 42.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1203774278]
+script = ExtResource("1_essrt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=189816559]
 position = Vector2(0, -33)
-texture = ExtResource("1_ucweq")
+texture = ExtResource("2_c8ylr")
 hframes = 6
 vframes = 8
 frame = 24
@@ -206,3 +210,13 @@ tree_root = SubResource("AnimationNodeStateMachine_73kkf")
 anim_player = NodePath("../AnimationPlayer")
 parameters/attack/BlendSpace2D/blend_position = Vector2(0, 0)
 parameters/attack/TimeScale/scale = 1.0
+
+[node name="hurtbox" type="Area2D" parent="." unique_id=1052982711]
+collision_layer = 16
+collision_mask = 0
+input_pickable = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=73203795]
+position = Vector2(0, -40)
+shape = SubResource("CapsuleShape2D_pm80n")
