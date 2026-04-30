@@ -457,4 +457,8 @@ tile_set = SubResource("TileSet_iu7am")
 y_sort_enabled = true
 
 [node name="Enemy" parent="Enemies" unique_id=1816562011 instance=ExtResource("17_r6tr0")]
-position = Vector2(1129.9999, 597.0002)
+position = Vector2(1180.9999, 617.00024)
+
+[node name="Effects" type="Node2D" parent="." unique_id=337854559]
+unique_name_in_owner = true
+y_sort_enabled = true
